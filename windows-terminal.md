@@ -60,3 +60,32 @@ echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>! ~/.zshrc
 ### more font
 `https://github.com/ryanoasis/nerd-fonts`
 
+### oh-zsh config
+```
+brew install zsh zsh-completions wget shellcheck kubectl awscli z sshuttle watch zsh-syntax-highlighting tree tldr kubetail kubectx kubens derailed/k9s/k9s kube-ps1 derailed/popeye/popeye stern
+```
+
+```
+brew install zsh zsh-completions
+brew install zsh-syntax-highlighting
+
+git clone https://github.com/zsh-users/zsh-autosuggestions.git
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+plugins=(git zsh-nvm common-aliases git-extras npm osx docker docker-compose node web-search zsh-autosuggestions)
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
+
+### install z
+```
+brew install z
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+. $(brew --prefix)/etc/profile.d/z.sh
+```

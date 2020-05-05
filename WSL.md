@@ -5,6 +5,11 @@
 - upgrade windows version to 2004
 - search for `turn windows features on or off`
 - ensure to check `virtual machine platform` and `windows subsystem for linux`
+or
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
 ### upgrade wsl version
 ```
